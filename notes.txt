@@ -1,0 +1,8 @@
+https://github.com/AndyBlightLeeds/px4-ros2-drone-simulation/tree/main/docker
+
+before drone.bash:
+  build@66a952a72cbf:~/px4_drone_simulation_ws/src$ ln -s ~/code/drone/
+
+every time we attach:
+. code/docker/source_me.sh
+
