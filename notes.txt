@@ -6,3 +6,4 @@ before drone.bash:
 every time we attach:
 . code/docker/source_me.sh
 
+patch: copy docker/scratch/dh3/iris.* over existing esp in /git
