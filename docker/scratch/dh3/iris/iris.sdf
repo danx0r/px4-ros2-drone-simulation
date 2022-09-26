@@ -3,14 +3,14 @@
     <link name='base_link'>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
-        <mass>1.5</mass>
+        <mass>0.2</mass>
         <inertia>
-          <ixx>0.029125</ixx>
+          <ixx>0.01</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.029125</iyy>
+          <iyy>0.01</iyy>
           <iyz>0</iyz>
-          <izz>0.055225</izz>
+          <izz>0.02</izz>
         </inertia>
       </inertial>
       <collision name='base_link_inertia_collision'>
@@ -72,7 +72,7 @@
       <pose relative_to='/imu_joint'>0 0 0 0 -0 0</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
-        <mass>0.015</mass>
+        <mass>0.005</mass>
         <inertia>
           <ixx>1e-05</ixx>
           <ixy>0</ixy>
@@ -103,7 +103,7 @@
       <pose relative_to='rotor_0_joint'>0 0 0 0 -0 0</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
-        <mass>0.005</mass>
+        <mass>0.001</mass>
         <inertia>
           <ixx>9.75e-07</ixx>
           <ixy>0</ixy>
@@ -168,7 +168,7 @@
       <pose relative_to='rotor_1_joint'>0 0 0 0 -0 0</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
-        <mass>0.005</mass>
+        <mass>0.001</mass>
         <inertia>
           <ixx>9.75e-07</ixx>
           <ixy>0</ixy>
@@ -233,7 +233,7 @@
       <pose relative_to='rotor_2_joint'>0 0 0 0 -0 0</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
-        <mass>0.005</mass>
+        <mass>0.001</mass>
         <inertia>
           <ixx>9.75e-07</ixx>
           <ixy>0</ixy>
@@ -298,7 +298,7 @@
       <pose relative_to='rotor_3_joint'>0 0 0 0 -0 0</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
-        <mass>0.005</mass>
+        <mass>0.001</mass>
         <inertia>
           <ixx>9.75e-07</ixx>
           <ixy>0</ixy>
