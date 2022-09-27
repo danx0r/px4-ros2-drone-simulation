@@ -41,7 +41,7 @@ void Drone::Run()
   RCUTILS_LOG_INFO_NAMED("Drone", "%s: started", __FUNCTION__);
   // It is best to work on each test individually as the previous tests
   // may not leave everything pristine.
-  TestAutoModes();
+  //TestAutoModes();
   TestMission();
   exec_.cancel();
 }
@@ -78,6 +78,7 @@ void Drone::TestMission()
   int result = auto_pilot_->PreFlightChecks();
   if (result == 0) {
     RCUTILS_LOG_INFO_NAMED("Drone", "%s: Pre-flight checks OK", __FUNCTION__);
+    result = auto_pilot_->TakeOff(0.f);
     AutoPilotInterface::GeographicPointLocation start;
     result = auto_pilot_->GetHomeLocation(&start);
     if (result == 0) {
