@@ -79,8 +79,11 @@ void Drone::TestMission()
   if (result == 0) {
     RCUTILS_LOG_INFO_NAMED("Drone", "%s: Pre-flight checks OK", __FUNCTION__);
     result = auto_pilot_->TakeOff(0.f);
+    RCUTILS_LOG_INFO_NAMED("Drone", "%s: DANBUG A", __FUNCTION__);
     AutoPilotInterface::GeographicPointLocation start;
+    RCUTILS_LOG_INFO_NAMED("Drone", "%s: DANBUG B", __FUNCTION__);
     result = auto_pilot_->GetHomeLocation(&start);
+    RCUTILS_LOG_INFO_NAMED("Drone", "%s: DANBUG C %d", __FUNCTION__, result);
     if (result == 0) {
       // Now that we have the start position, set up a mission using waypoints
       // relative to the start position.
@@ -95,25 +98,30 @@ void Drone::TestMission()
       for (int i = 0; i < 5; ++i) {
         switch (i) {
           case 0:
+            RCUTILS_LOG_INFO_NAMED("Drone", "%s: case 0", __FUNCTION__);
             // Ascend to 5 metres.
-            waypoint.location.altitude += (5 * 1000);
+            waypoint.location.altitude += (2 * 1000);
             break;
           case 1:
+            RCUTILS_LOG_INFO_NAMED("Drone", "%s: case 1", __FUNCTION__);
             // Change latitude.
             // Should be a small change so it stays in range of Gazebo but big
             // enough to be visible.
-            waypoint.location.latitude += 5;
+            waypoint.location.latitude += 1;
             break;
           case 2:
+            RCUTILS_LOG_INFO_NAMED("Drone", "%s: case 2", __FUNCTION__);
             // Change longitude.
-            waypoint.location.longitude += 5;
+            waypoint.location.longitude += 0;
             break;
           case 3:
+            RCUTILS_LOG_INFO_NAMED("Drone", "%s: case 3", __FUNCTION__);
             // Return to above start location.
             waypoint.location.latitude = start.latitude;
             waypoint.location.longitude = start.longitude;
             break;
           case 4:
+            RCUTILS_LOG_INFO_NAMED("Drone", "%s: case 4", __FUNCTION__);
             // Land
             waypoint.location.altitude = start.altitude;
             break;
