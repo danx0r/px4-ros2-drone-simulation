@@ -16,7 +16,7 @@ then
         echo "Container '${SIMULATION_CONTAINER_NAME}' is already running."
     else
         # Container exists but is not running.
-        docker container start ${SIMULATION_CONTAINER_NAME} &> /dev/null
+        docker container start ${SIMULATION_CONTAINER_NAME}
         echo "Container '${SIMULATION_CONTAINER_NAME}' started."
     fi
 else
