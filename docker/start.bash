@@ -6,7 +6,7 @@ scripts_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &>/dev/null && pwd )"
 repo_root_dir=${scripts_dir}/..
 . ${scripts_dir}/vars.bash
 
-docker container inspect ${SIMULATION_CONTAINER_NAME} &> /dev/null
+docker container inspect ${SIMULATION_CONTAINER_NAME}
 if [ $? == 0 ]
 then
     # Container exists.
